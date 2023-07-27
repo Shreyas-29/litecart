@@ -96,6 +96,26 @@ const AuthForm: FC<AuthFormProps> = ({
         }
     };
 
+    const handleSocialAuth = async (action: string) => {
+        setAction(action);
+
+        try {
+            await signIn(action, {
+                callbackUrl: "/",
+                redirect: false
+            });
+        } catch (error) {
+            toast({
+                title: 'There was a problem.',
+                description: `There was an error signing in with ${action}.`,
+                variant: 'destructive',
+            })
+        } finally {
+            setAuthLoading(false);
+            setAction('');
+        }
+    }
+
     const toggleAuthType = () => {
         setAuthType(authType === 'LOGIN' ? 'REGISTER' : 'LOGIN');
     };
@@ -183,7 +203,7 @@ const AuthForm: FC<AuthFormProps> = ({
                             type='button'
                             variant="outline"
                             isLoading={action === 'github'}
-                            onClick={(() => handleAuth('github'))}
+                            onClick={(() => handleSocialAuth('github'))}
                         >
                             {authLoading ? null : <Icons.gitHub className="mr-2 h-4 w-4" />}
                             Github
@@ -192,7 +212,7 @@ const AuthForm: FC<AuthFormProps> = ({
                             type='button'
                             variant="outline"
                             isLoading={action === 'google'}
-                            onClick={(() => handleAuth('google'))}
+                            onClick={(() => handleSocialAuth('google'))}
                         >
                             {authLoading ? null : <Icons.google className="mr-2 h-4 w-4" />}
                             Google

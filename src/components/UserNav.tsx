@@ -50,6 +50,7 @@ const UserNav: FC<UserNavProps> = ({ user }) => {
                 toast({
                     description: 'You are signed out!',
                 })
+                router.refresh();
                 router.push("/signin");
             })
             .catch(() => {

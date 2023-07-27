@@ -56,7 +56,47 @@ export const authOptions: NextAuthOptions = {
     session: {
         strategy: 'jwt'
     },
+    pages: {
+        signIn: '/signin'
+    },
     secret: process.env.NEXTAUTH_SECRET,
+    callbacks: {
+        async session({ session, token }) {
+            if (token) {
+                session.user.id = token.id;
+                session.user.name = token.name;
+                session.user.email = token.email;
+                session.user.image = token.picture;
+                session.user.username = token.username;
+            }
+
+            return session;
+        },
+
+        async jwt({ token, user }) {
+            const dbUser = await db.user.findFirst({
+                where: {
+                    email: token.email!
+                }
+            });
+
+            if (!dbUser) {
+                token.id = user!.id;
+                return token;
+            }
+
+            return {
+                id: dbUser.id,
+                name: dbUser.name,
+                email: dbUser.email,
+                image: dbUser.image,
+                username: dbUser.username
+            }
+        },
+        redirect() {
+            return '/'
+        },
+    },
 };
 
 const handler = NextAuth(authOptions);
