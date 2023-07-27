@@ -17,8 +17,8 @@ import {
 import { User as UserProps } from "@prisma/client";
 import { LogOut, Settings } from "lucide-react";
 import { signOut } from "next-auth/react";
-import { redirect, usePathname, useRouter } from "next/navigation";
-import { FC, useCallback } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { FC } from "react";
 import { toast } from "./hooks/use-toast";
 
 

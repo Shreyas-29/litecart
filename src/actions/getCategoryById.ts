@@ -1,5 +1,4 @@
 import { db } from "@/lib/db";
-import getSession from "./getSession";
 
 const getCategoryById = async (categoryId: string) => {
     try {

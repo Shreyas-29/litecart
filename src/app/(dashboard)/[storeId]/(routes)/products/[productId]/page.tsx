@@ -1,9 +1,6 @@
-import { db } from '@/lib/db'
-import React from 'react'
-import ProductForm from './components/ProductForm'
-import { z } from 'zod'
-import { getProductById } from '@/actions';
-import { Image, Product } from '@prisma/client';
+import { db } from '@/lib/db';
+import { z } from 'zod';
+import ProductForm from './components/ProductForm';
 
 
 // const prodcutIdSchema = z.string().regex(/^[0-9a-zA-Z]{24}$/).length(12);

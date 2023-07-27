@@ -1,23 +1,22 @@
 "use client";
 
-import axios, { AxiosError } from "axios";
-import { FC, useState } from "react";
-import { Copy, Delete, Edit, MoreHorizontal, Trash } from "lucide-react";
 import { toast } from "@/components/hooks/use-toast";
+import axios, { AxiosError } from "axios";
+import { MoreHorizontal } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
+import { FC, useState } from "react";
 
+import { DeleteModal } from "@/components";
 import { Button } from "@/components/ui/Button";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger
 } from "@/components/ui/DropDownMenu";
-import { DeleteModal } from "@/components";
-import { SizeColumn } from "./SizeColumn";
 import { useMutation } from "@tanstack/react-query";
+import { SizeColumn } from "./SizeColumn";
 
 interface SizeCellProps {
     size: SizeColumn;
@@ -32,20 +31,6 @@ const SizeCell: FC<SizeCellProps> = ({
     const router = useRouter();
 
     const [open, setOpen] = useState(false);
-
-    // const handleDelete = async () => {
-    //     setLoading(true);
-    //     try {
-    //         const res = await axios.delete(`/api/store/${params.storeId}/sizes/${size.id}`);
-    //         if (res.status === 200) {
-    //             toast.success("Size deleted successfully");
-    //             router.reload();
-    //         }
-    //     } catch (error) {
-    //         toast.error(error.message);
-    //     }
-    //     setLoading(false);
-    // }
 
     const { mutate: deleteSize, isLoading } = useMutation({
         mutationFn: async () => {

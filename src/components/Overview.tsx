@@ -1,7 +1,7 @@
 "use client";
 
 import { FC } from "react";
-import { Bar, BarChart, Legend, ResponsiveContainer, XAxis, YAxis, Tooltip } from "recharts"
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 
 
 interface OverviewProps {

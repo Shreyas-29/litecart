@@ -1,7 +1,6 @@
-import { getCurrentUser } from '@/actions'
+import { getCurrentUser } from '@/actions';
 import { db } from '@/lib/db';
 import { redirect } from 'next/navigation';
-import React from 'react'
 import SettingsForm from './components/SettingsForm';
 
 

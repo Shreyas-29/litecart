@@ -3,9 +3,7 @@ import { buttonVariants } from '@/components/ui/Button'
 import { cn } from '@/lib'
 import { ChevronLeft } from 'lucide-react'
 import { Metadata } from 'next'
-import { getServerSession } from 'next-auth'
 import Link from "next/link"
-import { redirect } from 'next/navigation'
 
 
 export const metadata: Metadata = {

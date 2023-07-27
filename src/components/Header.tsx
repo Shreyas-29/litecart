@@ -1,11 +1,9 @@
-import React, { FC } from 'react'
-
+import { FC } from 'react';
 
 interface HeaderProps {
     title: string;
     subtitle: string;
 }
-
 
 const Header: FC<HeaderProps> = ({
     title,

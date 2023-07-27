@@ -1,9 +1,9 @@
 "use client";
 
-import React from 'react'
-import Link from "next/link"
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 import { useParams, usePathname } from 'next/navigation';
+import React from 'react';
 
 const Navbar = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
 

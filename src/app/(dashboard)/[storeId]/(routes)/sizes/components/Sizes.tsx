@@ -1,18 +1,17 @@
 "use client";
 
-import React, { FC } from 'react'
-import { SizeColumn, columns } from './SizeColumn';
-import { useParams, useRouter } from 'next/navigation';
 import { Button, Header } from '@/components';
-import { Separator } from '@/components/ui/Separator';
 import { DataTable } from '@/components/ui/DataTable';
+import { Separator } from '@/components/ui/Separator';
 import { Plus } from 'lucide-react';
+import { useParams, useRouter } from 'next/navigation';
+import { FC } from 'react';
+import { SizeColumn, columns } from './SizeColumn';
 
 
 interface SizesProps {
     sizes: SizeColumn[];
 }
-
 
 const Sizes: FC<SizesProps> = ({
     sizes

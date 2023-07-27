@@ -1,7 +1,6 @@
-import { db } from '@/lib/db'
-import React from 'react'
-import { ColorColumn } from './components/ColorColumn';
+import { db } from '@/lib/db';
 import { format } from 'date-fns';
+import { ColorColumn } from './components/ColorColumn';
 import Colors from './components/Colors';
 
 

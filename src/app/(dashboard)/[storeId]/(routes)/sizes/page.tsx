@@ -1,8 +1,7 @@
-import { db } from '@/lib/db'
-import React from 'react'
+import { db } from '@/lib/db';
 import { format } from 'date-fns';
-import Sizes from './components/Sizes';
 import { SizeColumn } from './components/SizeColumn';
+import Sizes from './components/Sizes';
 
 
 const SizesPage = async ({

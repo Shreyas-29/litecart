@@ -1,63 +1,8 @@
 import { getCurrentUser, getStoreName } from "@/actions";
-import { Navbar, Sidebar, StoreSwitcher, UserNav } from "@/components";
+import { Sidebar, StoreSwitcher, UserNav } from "@/components";
 import { db } from "@/lib/db";
 import { Metadata } from "next";
-import { redirect } from "next/navigation";
 import React from "react";
-
-// export const metadatas: Metadata = {
-//     title: 'LiteCart - Dashboard',
-//     description: 'An e-commerce website built with Next.js, Tailwind CSS, Server Components, and Server Actions.',
-//     keywords: [
-//         "Next.js",
-//         "React",
-//         "Tailwind CSS",
-//         "Mongo DB",
-//         "Stripe",
-//         "LiteCart",
-//         "E-commerce",
-//         "Shadcn UI",
-//     ],
-//     icons: {
-//         icon: '../../favicon.ico',
-//     },
-//     authors: [
-//         {
-//             name: "Shreyas",
-//             url: "https://github.com/Shreyas-29",
-//         },
-//     ],
-//     creator: "Shreyas"
-// };
-
-// export async function metadata({ params }: { params: { id: string } }) {
-//     const name = getStoreName(params.id);
-
-//     return {
-//         title: `${name} - Dashboard`,
-//         description: `Dashboard for ${name} store`,
-//         keywords: [
-//             "Next.js",
-//             "React",
-//             "Tailwind CSS",
-//             "Mongo DB",
-//             "Stripe",
-//             "LiteCart",
-//             "E-commerce",
-//             "Shadcn UI",
-//         ],
-//         icons: {
-//             icon: '../../favicon.ico',
-//         },
-//         authors: [
-//             {
-//                 name: "Shreyas",
-//                 url: "https://github.com/Shreyas-29",
-//             },
-//         ],
-//         creator: "Shreyas"
-//     }
-// }
 
 type Props = {
     params: { storeId: string };

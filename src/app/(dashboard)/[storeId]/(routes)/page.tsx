@@ -2,7 +2,7 @@ import { getGraphRevenue, getOrdersCount, getRevenue, getSaleCount, getStockCoun
 import { Header, Overview } from '@/components';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Tabs, TabsContent } from '@/components/ui/Tabs';
-import { Activity, Box, CreditCard, DollarSign, IndianRupee, Package, PackageCheck, Users } from 'lucide-react';
+import { Box, CreditCard, IndianRupee, PackageCheck } from 'lucide-react';
 
 
 export default async function Dashboard({

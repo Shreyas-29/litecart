@@ -1,21 +1,21 @@
 "use client";
 
+import { Button, DeleteModal, Header, ImageButton } from '@/components';
 import { toast } from '@/components/hooks/use-toast';
-import { CreateProductPayload, ProductValidator } from '@/lib';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Category, Product, Image, Size, Color } from '@prisma/client';
-import { useMutation } from '@tanstack/react-query';
-import axios, { AxiosError } from 'axios';
-import { useParams, useRouter } from 'next/navigation';
-import React, { FC, useState } from 'react'
-import { useForm } from 'react-hook-form';
-import { Button, DeleteModal, Header, ImageButton, Modal } from '@/components';
-import { Trash } from 'lucide-react';
-import { Separator } from '@/components/ui/Separator';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/Form';
 import { Input } from '@/components/ui/Input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/Select';
+import { Separator } from '@/components/ui/Separator';
 import { Textarea } from '@/components/ui/Textarea';
+import { CreateProductPayload, ProductValidator } from '@/lib';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Category, Color, Image, Product, Size } from '@prisma/client';
+import { useMutation } from '@tanstack/react-query';
+import axios, { AxiosError } from 'axios';
+import { Trash } from 'lucide-react';
+import { useParams, useRouter } from 'next/navigation';
+import { FC, useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 interface ProductFormProps {
     initialData?: Product & {

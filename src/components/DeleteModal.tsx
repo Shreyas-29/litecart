@@ -1,7 +1,6 @@
 "use client";
 
-import React, { FC, useEffect, useState } from 'react'
-import { Dialog, DialogContent, DialogHeader } from './ui/Dialog';
+import { FC } from 'react';
 import Modal from './Modal';
 import { Button } from './ui/Button';
 

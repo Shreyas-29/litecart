@@ -1,23 +1,22 @@
 "use client";
 
+import { Button } from '@/components';
 import { toast } from "@/components/hooks/use-toast";
+import { buttonVariants } from "@/components/ui/Button";
+import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/Form';
+import { Input } from '@/components/ui/Input';
 import { UpdateUserPayload, UserValidator, cn } from "@/lib";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { User } from "@prisma/client";
 import { useMutation } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
-import { useRouter } from "next/navigation";
-import { FC, useState } from "react";
 import { ImagePlus, Trash } from 'lucide-react';
-import { useForm } from 'react-hook-form';
-import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/Form';
-import { Input } from '@/components/ui/Input';
-import { Separator } from '@/components/ui/Separator';
-import { Button, DeleteModal, Header, ImageButton } from '@/components';
 import { useSession } from "next-auth/react";
 import { CldUploadButton } from "next-cloudinary";
-import { buttonVariants } from "@/components/ui/Button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { FC, useState } from "react";
+import { useForm } from 'react-hook-form';
 
 
 interface UserFormProps {

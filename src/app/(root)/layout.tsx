@@ -1,8 +1,8 @@
+import getCurrentUser from "@/actions/getCurrentUser";
+import { db } from "@/lib/db";
+import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import React from "react";
-import { db } from "@/lib/db";
-import getCurrentUser from "@/actions/getCurrentUser";
-import { Metadata } from "next";
 
 
 export const metadata: Metadata = {

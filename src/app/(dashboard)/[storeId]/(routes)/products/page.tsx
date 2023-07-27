@@ -1,8 +1,7 @@
-import { db } from '@/lib/db'
-import React from 'react'
-import { ProductColumn } from './components/ProductColumn';
 import { formatter } from '@/lib';
+import { db } from '@/lib/db';
 import { format } from 'date-fns';
+import { ProductColumn } from './components/ProductColumn';
 import Products from './components/Products';
 
 

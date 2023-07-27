@@ -1,7 +1,6 @@
 import { getCurrentUser } from "@/actions";
 import { StoreValidator } from "@/lib";
 import { db } from "@/lib/db";
-import { getServerSession } from 'next-auth';
 import { NextResponse } from "next/server";
 import { z } from 'zod';
 

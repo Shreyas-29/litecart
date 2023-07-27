@@ -1,6 +1,5 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
 import {
     Dialog,
     DialogContent,
@@ -8,6 +7,7 @@ import {
     DialogHeader,
     DialogTitle
 } from "@/components/ui/Dialog";
+import { FC } from "react";
 
 interface ModalProps {
     title: string;

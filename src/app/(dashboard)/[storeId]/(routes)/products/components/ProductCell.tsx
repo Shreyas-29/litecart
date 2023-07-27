@@ -1,23 +1,22 @@
 "use client";
 
-import axios, { AxiosError } from "axios";
-import { FC, useState } from "react";
-import { Copy, Delete, Edit, MoreHorizontal, Trash } from "lucide-react";
 import { toast } from "@/components/hooks/use-toast";
+import axios, { AxiosError } from "axios";
+import { MoreHorizontal } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
+import { FC, useState } from "react";
 
+import { DeleteModal } from "@/components";
 import { Button } from "@/components/ui/Button";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger
 } from "@/components/ui/DropDownMenu";
-import { DeleteModal } from "@/components";
-import { ProductColumn } from "./ProductColumn";
 import { useMutation } from "@tanstack/react-query";
+import { ProductColumn } from "./ProductColumn";
 
 interface ProductCellProps {
     product: ProductColumn;

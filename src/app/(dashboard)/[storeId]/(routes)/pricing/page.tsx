@@ -1,7 +1,6 @@
+import { getCurrentUser } from '@/actions'
 import { Header } from '@/components'
-import React from 'react'
 import PlanCard from './components/PlanCard'
-import { getCurrentUser, getUserSubscriptionPlan } from '@/actions'
 
 const PricingPage = async () => {
 

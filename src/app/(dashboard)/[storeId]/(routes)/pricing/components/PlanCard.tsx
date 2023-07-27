@@ -9,11 +9,9 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/Card";
-import { UserSubscriptionPlan } from "@/types";
 import { User } from "@prisma/client";
 import { useMutation } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
-import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState } from "react";
 

@@ -1,8 +1,6 @@
-import React from 'react'
+import { getCategoryById } from '@/actions';
 import { z } from 'zod';
 import CategoryForm from './components/CategoryForm';
-import { db } from '@/lib/db';
-import { getCategoryById } from '@/actions';
 
 
 const categoryIdSchema = z.string().regex(/^[0-9a-fA-F]{24}$/).length(12);

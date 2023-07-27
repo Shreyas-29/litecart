@@ -1,5 +1,4 @@
 import { getColorById } from '@/actions';
-import React from 'react'
 import { z } from 'zod';
 import ColorForm from './components/ColorForm';
 

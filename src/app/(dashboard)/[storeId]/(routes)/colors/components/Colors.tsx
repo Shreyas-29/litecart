@@ -1,12 +1,12 @@
 "use client";
 
-import React, { FC } from 'react'
-import { ColorColumn, columns } from './ColorColumn';
-import { useParams, useRouter } from 'next/navigation';
-import { Separator } from '@/components/ui/Separator';
-import { DataTable } from '@/components/ui/DataTable';
 import { Button, Header } from '@/components';
+import { DataTable } from '@/components/ui/DataTable';
+import { Separator } from '@/components/ui/Separator';
 import { Plus } from 'lucide-react';
+import { useParams, useRouter } from 'next/navigation';
+import { FC } from 'react';
+import { ColorColumn, columns } from './ColorColumn';
 
 interface ColorsProps {
     colors: ColorColumn[];

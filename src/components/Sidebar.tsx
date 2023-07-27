@@ -1,15 +1,11 @@
 "use client";
 
 
-import React from 'react'
-import Link from "next/link"
-import { cn } from "@/lib/utils"
-import { useParams, usePathname, useRouter } from 'next/navigation';
-import { Button, buttonVariants } from './ui/Button';
-import { Icons } from './Icons';
+import { cn } from "@/lib/utils";
 import Image from 'next/image';
-import { Box, Router } from 'lucide-react';
-import { User } from '@prisma/client';
+import { useParams, usePathname, useRouter } from 'next/navigation';
+import React from 'react';
+import { Button } from './ui/Button';
 
 const Sidebar = ({ className, user }: React.HTMLAttributes<HTMLElement> & any) => {
 

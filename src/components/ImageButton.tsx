@@ -1,11 +1,11 @@
 "use client";
 
+import { cn } from "@/lib";
+import { ImagePlus, Trash } from "lucide-react";
+import { CldUploadButton } from 'next-cloudinary';
+import Image from "next/image";
 import { FC } from "react";
 import { Button, buttonVariants } from "./ui/Button";
-import { ImagePlus, Trash } from "lucide-react";
-import Image from "next/image";
-import { CldUploadButton } from 'next-cloudinary';
-import { cn } from "@/lib";
 
 interface ImageButtonProps {
     disabled?: boolean;

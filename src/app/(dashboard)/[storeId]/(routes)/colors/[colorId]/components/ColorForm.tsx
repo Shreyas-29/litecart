@@ -1,20 +1,19 @@
 "use client";
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Color } from '@prisma/client';
-import { useParams, useRouter } from 'next/navigation';
-import React, { FC, useState } from 'react'
-import { z } from 'zod';
-import { useForm } from 'react-hook-form'
-import axios, { AxiosError } from 'axios';
+import { Button, DeleteModal, Header } from '@/components';
 import { toast } from '@/components/hooks/use-toast';
-import { Button, DeleteModal, Header, Modal } from '@/components';
-import { Trash } from 'lucide-react';
-import { Separator } from '@/components/ui/Separator';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/Form';
 import { Input } from '@/components/ui/Input';
-import { ColorValidator, CreateColorPayload, cn } from '@/lib';
+import { Separator } from '@/components/ui/Separator';
+import { ColorValidator, CreateColorPayload } from '@/lib';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Color } from '@prisma/client';
 import { useMutation } from '@tanstack/react-query';
+import axios, { AxiosError } from 'axios';
+import { Trash } from 'lucide-react';
+import { useParams, useRouter } from 'next/navigation';
+import { FC, useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 
 interface ColorFormProps {
