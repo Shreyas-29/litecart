@@ -1,0 +1,44 @@
+data 
+Object { id: "64a65b2d58433d4f6b021ead", name: "CLothing", userId: "64a654375c13540606a845ed", createdAt: "2023-07-06T06:11:57.446Z", updatedAt: "2023-07-06T06:11:57.446Z" }
+CreateStore.tsx:47:21
+GET
+http://localhost:3000/favicon.ico
+[HTTP/1.1 500 Internal Server Error 0ms]
+
+Warning: Extra attributes from the server: data-new-gr-c-s-check-loaded,data-gr-ext-installed
+body
+html
+RedirectErrorBoundary@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9
+RedirectBoundary@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/redirect-boundary.js:81:24
+NotFoundErrorBoundary@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/not-found-boundary.js:51:9
+NotFoundBoundary@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/not-found-boundary.js:59:62
+ReactDevOverlay@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/react-dev-overlay/internal/ReactDevOverlay.js:66:9
+HotReload@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/react-dev-overlay/hot-reloader-client.js:276:37
+Router@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/app-router.js:92:131
+ErrorBoundaryHandler@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/error-boundary.js:77:9
+ErrorBoundary@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/error-boundary.js:101:53
+AppRouter@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/app-router.js:392:47
+ServerRoot@webpack-internal:///(app-client)/./node_modules/next/dist/client/app-index.js:163:24
+RSCComponent
+Root@webpack-internal:///(app-client)/./node_modules/next/dist/client/app-index.js:180:24 app-index.js:32:21
+Uncaught Error: 
+Invalid `prisma.order.findMany()` invocation:
+
+
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: "undefined", length 9.
+14 react-server-dom-webpack-client.browser.development.js:1608
+The above error occurred in the <NotFoundErrorBoundary> component:
+
+NotFoundErrorBoundary@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/not-found-boundary.js:51:9
+NotFoundBoundary@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/not-found-boundary.js:59:62
+ReactDevOverlay@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/react-dev-overlay/internal/ReactDevOverlay.js:66:9
+HotReload@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/react-dev-overlay/hot-reloader-client.js:276:37
+Router@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/app-router.js:92:131
+ErrorBoundaryHandler@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/error-boundary.js:77:9
+ErrorBoundary@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/error-boundary.js:101:53
+AppRouter@webpack-internal:///(app-client)/./node_modules/next/dist/client/components/app-router.js:392:47
+ServerRoot@webpack-internal:///(app-client)/./node_modules/next/dist/client/app-index.js:163:24
+RSCComponent
+Root@webpack-internal:///(app-client)/./node_modules/next/dist/client/app-index.js:180:24
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ReactDevOverlay. app-index.js:32:21
