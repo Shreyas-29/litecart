@@ -1,7 +1,6 @@
 // TODO: Fix this when we turn strict mode on.
-import { UserSubscriptionPlan } from "@/types"
-import { db } from "@/lib/db"
 import { freePlan, proPlan } from "@/lib";
+import { db } from "@/lib/db";
 
 const getUserSubscriptionPlan = async <UserSubscriptionPlan>(userId: string) => {
     const user = await db.user.findFirst({
